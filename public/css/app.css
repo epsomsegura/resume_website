@@ -1,0 +1,246 @@
+html,body,.container,.container-fluid{
+    height: 100%;
+    width: 100%;
+}
+
+/* LANDING PAGE */
+/* Menú */
+.navbar-fixed{
+    background-color: transparent !important;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+}
+.bars {
+    /*   background-color:pink; */
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 101;
+    margin: 10px;
+  }
+  
+  .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+  }
+  
+  span::before,
+  span::after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+  }
+  
+  .bar::before {
+    transform: translateY(-9px);
+  }
+  
+  .bar::after {
+    transform: translateY(9px);
+  }
+  
+  .bars.active .bar {
+    background-color: transparent;
+  }
+  
+  .bars.active span::before {
+    animation: top-bar 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  .bars.active span::after {
+    animation: bottom-bar 1s;
+    animation-fill-mode: forwards;
+  } 
+  
+  /* Navbar Links CSS */
+  #nav-circle {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 1s;
+    z-index: 10;
+    overflow: hidden;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+  }
+  
+  #nav-circle a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 10vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-indent: 10vw;
+    border-radius: 50%;
+    transition: all .5s;
+  }
+  
+  #nav-circle a:hover {
+    background-color: rgba(50,50,50,0.6);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .visible {
+    z-index: 100 !important;
+    opacity: 1 !important;
+  }
+  
+  .shape-circle {
+    border-radius: 50%;
+    width: 20vw;
+    height: 20vw;
+    top: -10vw;
+    right: -10px;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    background: #2979FF;
+    box-shadow: 0 0px 0px rgba(4, 26, 62, 0.5);
+  }
+  
+  nav.visible li:first-child {
+    width: 170vw;
+    height: 170vw;
+    top: -85vw;
+    right: -85vw;
+    z-index: 5;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+  }
+  
+  nav.visible li:nth-child(2) {
+    width: 140vw;
+    height: 140vw;
+    top: -70vw;
+    right: -70vw;
+    z-index: 6;
+    transition: all .4s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+  }
+  
+  nav.visible li:nth-child(3){
+    width: 110vw;
+    height: 110vw;
+    top: -55vw;
+    right: -55vw;
+    z-index: 7;
+    transition: all .5s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+  }
+
+  nav.visible li:nth-child(4){
+    width: 80vw;
+    height: 80vw;
+    top: -40vw;
+    right: -40vw;
+    z-index: 8;
+    transition: all .6s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+  }
+  
+  nav.visible li:last-child{
+    width: 50vw;
+    height: 50vw;
+    top: -25vw;
+    right: -25vw;
+    z-index: 10;
+    transition: all .7s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+  }
+  
+  nav.visible li:first-child a {
+    line-height: 270vw !important;
+    text-indent:18vw !important;
+  
+  }
+    
+  nav.visible li:nth-child(2) a {
+    line-height: 220vw !important;
+      text-indent: 16vw !important;
+    
+  }
+  nav.visible li:nth-child(3) a {
+    line-height: 170vw !important;
+      text-indent: 14vw !important;
+    
+  }
+
+  nav.visible li:nth-child(4) a {
+    line-height: 120vw !important;
+      text-indent: 12vw !important;
+    
+  }
+  
+  nav.visible li:last-child a {
+    line-height: 70vw !important;
+    text-indent:10vw !important;
+  }
+  
+  @keyframes top-bar {
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: rotate(45deg) translateY(0);
+    }
+  }
+  
+  @keyframes bottom-bar {
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: rotate(-45deg) translateY(0);
+    }
+  }
+  
+  @media screen and (max-width:800px) {
+    h1 {
+      padding-top:80px;
+      font-size: 60px;
+    }
+  }
+  
+
+/* FIRST */
+#first{
+    height: 100%;
+    background-color: red;
+    /* background: url('http://thecodeplayer.com/u/m/b1.png') no-repeat center center fixed; */
+}
+
+
+/* LOADER */
+.loader-container{
+    background-color: white;
+    z-index: 9999;
+    height: 100%;
+    display: flex;
+}
+.loader-container > .preloader-wrapper{
+    margin: auto;
+}
+
+/* LOGIN */
+.login-row{
+    height: 100%;
+}
+
